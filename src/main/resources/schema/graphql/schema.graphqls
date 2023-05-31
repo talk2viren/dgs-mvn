@@ -1,0 +1,73 @@
+type Query{
+    albums(titleFilter: String): [Album]
+    bookById(id:String) : [Book]
+    students : [Student]
+}
+
+#type Metation{
+#}
+
+input createMovie{
+id:ID
+name:String
+
+}
+
+
+interface Charter{
+    name: String
+    city: Int
+}
+
+type MyName implements Charter{
+    name: String
+    city: Int
+
+}
+
+type Album {
+
+    title: String
+    artist: String
+    recordNo: Int
+}
+
+enum Episode {
+    NEWHOPE
+    EMPIRE
+    JEDI
+}
+
+
+type Book{
+    id : String
+    name : String
+    author : String
+    price : Float
+#    ratings: [Ratings]
+}
+
+type Person {
+    id: String
+    name: String
+    age: Int
+}
+
+type Ratings{
+    id: ID
+    ratings : Int
+    comment: String
+    user: String
+}
+
+type Student{
+    id : String
+    firstName: String
+    lastName: String
+    city: String
+}
+
+type Show{
+    id: Int
+    title: String
+}
