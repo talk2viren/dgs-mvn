@@ -83,7 +83,15 @@
 				<artifactId>graphql-java-runtime</artifactId>
 				<version>1.18</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-webflux</artifactId>
+			</dependency>
 
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-webflux</artifactId>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

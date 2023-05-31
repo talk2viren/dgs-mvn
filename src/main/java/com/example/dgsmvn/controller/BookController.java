@@ -2,10 +2,7 @@ package com.example.dgsmvn.controller;
 
 import com.example.dgsmvn.domain.Book;
 import com.example.dgsmvn.domain.Rating;
-import com.netflix.graphql.dgs.DgsComponent;
-import com.netflix.graphql.dgs.DgsEntityFetcher;
-import com.netflix.graphql.dgs.DgsQuery;
-import com.netflix.graphql.dgs.InputArgument;
+import com.netflix.graphql.dgs.*;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
@@ -33,5 +30,10 @@ public class BookController {
              return bookList;
         }
         return bookList.stream().filter(book -> book.getId().equals(id)).collect(Collectors.toList());
+    }
+
+    @DgsMutation
+    public Book createBook(@InputArgument String name){
+        return new Book("5", name, "Book Author 5", 55);
     }
 }

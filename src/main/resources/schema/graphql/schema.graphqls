@@ -4,6 +4,10 @@ type Query{
     students : [Student]
 }
 
+type Mutation{
+    bookById(name:String):Book
+}
+
 #type Metation{
 #}
 
